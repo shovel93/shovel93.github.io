@@ -73,6 +73,18 @@ img.thumbnail {
 .footer-logo img {
   max-height: 1.75rem;
 }
+.navbar-logo {
+  white-space: nowrap;
+}
+.navbar-logo .dummy {
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  vertical-align: middle;
+}
+.navbar-logo img {
+  vertical-align: middle;
+}
 .navbar-main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -92,13 +104,15 @@ img.thumbnail {
   justify-content: flex-start;
   margin-right: auto;
 }
+.navbar-main .navbar-start .sub_menu {
+  display: block;
+}
 .navbar-main .navbar-end {
   justify-content: flex-end;
   margin-left: auto;
 }
 .navbar-main .navbar-item {
-  display: flex;
-  align-items: center;
+  display: block;
   padding: 1.25rem 0.75rem;
 }
 .navbar-main .navbar-item.is-active {
