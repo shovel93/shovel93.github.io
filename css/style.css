@@ -469,6 +469,13 @@ figure.highlight .section {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 }
+.article .title {
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+.article .content {
+  margin-top: 1.5rem;
+}
 @media screen and (max-width: 1087px) {
   .navbar .x-scroller {
     width: auto;
