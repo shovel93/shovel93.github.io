@@ -1,5 +1,5 @@
 /* ---------------------------------
- *       Override CSS Framework
+ *	   Override CSS Framework
  * --------------------------------- */
 html {
   font-size: 14px;
@@ -73,18 +73,6 @@ img.thumbnail {
 .footer-logo img {
   max-height: 1.75rem;
 }
-.navbar-logo {
-  white-space: nowrap;
-}
-.navbar-logo .dummy {
-  display: inline-block;
-  height: 100%;
-  width: 0;
-  vertical-align: middle;
-}
-.navbar-logo img {
-  vertical-align: middle;
-}
 .navbar-main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -104,7 +92,7 @@ img.thumbnail {
   justify-content: flex-start;
   margin-right: auto;
 }
-.navbar-main .navbar-start .sub_menu {
+.navbar-main .navbar-start .navbar-item {
   display: block;
 }
 .navbar-main .navbar-end {
@@ -112,7 +100,8 @@ img.thumbnail {
   margin-left: auto;
 }
 .navbar-main .navbar-item {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 1.25rem 0.75rem;
 }
 .navbar-main .navbar-item.is-active {
@@ -249,7 +238,7 @@ img.thumbnail {
   }
 }
 /* ---------------------------------
- *         Custom modifiers
+ *		 Custom modifiers
  * --------------------------------- */
 .is-size-7 {
   font-size: 0.85rem !important;
@@ -326,7 +315,7 @@ img.thumbnail {
   }
 }
 /* ---------------------------------
- *         Font icon fixes
+ *		 Font icon fixes
  * --------------------------------- */
 .fa,
 .fab,
@@ -336,7 +325,7 @@ img.thumbnail {
   line-height: inherit;
 }
 /* ---------------------------------
- *        Fix content elements
+ *		Fix content elements
  * --------------------------------- */
 .content h1,
 .content h2,
@@ -375,7 +364,7 @@ img.thumbnail {
   margin-left: 0.5em;
 }
 /* ---------------------------------
- *        Fix code highlight
+ *		Fix code highlight
  * --------------------------------- */
 figure.highlight {
   padding: 0;
@@ -434,7 +423,7 @@ figure.highlight .section {
   border-radius: inherit;
 }
 /* ---------------------------------
- *        Fix Gist Snippet
+ *		Fix Gist Snippet
  * --------------------------------- */
 .gist table tr:hover {
   background: transparent;
@@ -444,4 +433,44 @@ figure.highlight .section {
 }
 .gist .file {
   all: initial;
+}
+/* --- shovel custom --*/
+.card.widget._category ._main_category {
+  font-weight: 800;
+}
+.card.widget._category ._sub_category {
+  font-weight: normal;
+}
+.navbar-start .navbar-item:before {
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  vertical-align: middle;
+  content: '';
+}
+.navbar-start ._menu_inner {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+.navbar-start ._sub_menu {
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+.navbar .x-scroller {
+  display: flex;
+  width: 100%;
+}
+.x-scroller {
+  padding-bottom: 50px;
+  margin-bottom: -50px;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+@media screen and (max-width: 1087px) {
+  .navbar .x-scroller {
+    width: auto;
+  }
 }
