@@ -449,6 +449,10 @@ figure.highlight .section {
   height: 74px;
   overflow-y: hidden;
 }
+.navbar-start,
+.navber-end {
+  height: 74px;
+}
 .navbar-start .navbar-item:before {
   display: inline-block;
   height: 100%;
