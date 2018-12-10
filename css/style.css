@@ -441,6 +441,14 @@ figure.highlight .section {
 .card.widget._category ._sub_category {
   font-weight: normal;
 }
+.navbar .x-scroller {
+  display: flex;
+  width: 100%;
+}
+.navbar-main .navbar-menu {
+  height: 74px;
+  overflow-y: hidden;
+}
 .navbar-start .navbar-item:before {
   display: inline-block;
   height: 100%;
@@ -458,10 +466,6 @@ figure.highlight .section {
   text-align: center;
   font-size: 0.9em;
   opacity: 0.8;
-}
-.navbar .x-scroller {
-  display: flex;
-  width: 100%;
 }
 .x-scroller {
   padding-bottom: 50px;
