@@ -425,6 +425,16 @@ figure.highlight .section {
 /* ---------------------------------
  *		Fix Gist Snippet
  * --------------------------------- */
+.blind {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
 .gist table tr:hover {
   background: transparent;
 }
@@ -435,6 +445,14 @@ figure.highlight .section {
   all: initial;
 }
 /* --- shovel custom --*/
+.navbar-logo img,
+.footer-logo img {
+  max-width: none;
+  max-height: none;
+  height: 28px;
+  width: 95px;
+  vertical-align: top;
+}
 .card.widget._category ._main_category {
   font-weight: 800;
 }
@@ -445,12 +463,20 @@ figure.highlight .section {
   display: flex;
   width: 100%;
 }
+@media screen and (max-width: 1087px) {
+  .navbar .navbar-brand {
+    border-bottom: 1px solid #e0e0ec;
+  }
+}
 .navbar-main .navbar-menu {
   height: 74px;
   overflow-y: hidden;
 }
+.navbar-main .navbar-logo {
+  padding: 0.3rem 0;
+}
 .navbar-start,
-.navber-end {
+.navbar-end {
   height: 74px;
 }
 .navbar-start .navbar-item:before {
@@ -475,6 +501,7 @@ figure.highlight .section {
   padding-bottom: 50px;
   margin-bottom: -50px;
   overflow-x: scroll;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
 .article .title {

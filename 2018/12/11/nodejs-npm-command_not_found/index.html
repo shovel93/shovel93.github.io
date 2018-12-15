@@ -2,21 +2,23 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>아카이브: 2018 - SHOVEL93</title>
+<title>npm global 패키지 명령어를 찾을 수 없을 때 - SHOVEL93</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="언젠가 이 삽질이 멈출때까지...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SHOVEL93">
-<meta property="og:url" content="http://shovel93.github.io/archives/2018/index.html">
+    <meta name="description" content="문제종종 node설치가 잘못되면 -g 옵션으로 설치한 패키지를 실행할 수 없는 상황이 발생한다. 12$ http-servercommand not found: http-server 매우 난감한 상황. 이 글은 이 문제를 해결한 과정을 기록삼아 남긴것으로 Mac OS 환경에서 수행했지만 다른환경에서도 적절히 적용이 가능 할 것이다.">
+<meta name="keywords" content="nodejs,npm,trouble shooting">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm global 패키지 명령어를 찾을 수 없을 때">
+<meta property="og:url" content="http://shovel93.github.io/2018/12/11/nodejs-npm-command_not_found/index.html">
 <meta property="og:site_name" content="SHOVEL93">
-<meta property="og:description" content="언젠가 이 삽질이 멈출때까지...">
+<meta property="og:description" content="문제종종 node설치가 잘못되면 -g 옵션으로 설치한 패키지를 실행할 수 없는 상황이 발생한다. 12$ http-servercommand not found: http-server 매우 난감한 상황. 이 글은 이 문제를 해결한 과정을 기록삼아 남긴것으로 Mac OS 환경에서 수행했지만 다른환경에서도 적절히 적용이 가능 할 것이다.">
 <meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2018-12-15T04:31:13.048Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SHOVEL93">
-<meta name="twitter:description" content="언젠가 이 삽질이 멈출때까지...">
+<meta name="twitter:title" content="npm global 패키지 명령어를 찾을 수 없을 때">
+<meta name="twitter:description" content="문제종종 node설치가 잘못되면 -g 옵션으로 설치한 패키지를 실행할 수 없는 상황이 발생한다. 12$ http-servercommand not found: http-server 매우 난감한 상황. 이 글은 이 문제를 해결한 과정을 기록삼아 남긴것으로 Mac OS 환경에서 수행했지만 다른환경에서도 적절히 적용이 가능 할 것이다.">
 
 
 
@@ -83,7 +85,7 @@
 			<h1 class="navbar-item navbar-logo">
 	            <a href="/">
 	            
-	                <img src="/images/logo.png" alt="SHOVEL93" height="28" width="95">
+	                <img src="/images/logo.png" alt="npm global 패키지 명령어를 찾을 수 없을 때" height="28" width="95">
 	            
 	            </a>
 			</h1>
@@ -124,95 +126,112 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="tag is-link">
-        2018
-        </h3>
-        <div class="timeline">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
         
-            <article class="media">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-11T10:09:31.000Z">2018-12-11</time>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2018-12-15T04:47:40.000Z">2018-12-15</time>
-                        <a href="/2018/12/15/hexo-config/" class="has-link-black-ter is-size-6">hexo 설정 파일</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/Hexo/">Hexo</a> / <a class="has-link-grey -link" href="/categories/Hexo/Doc/">Doc</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/nodejs/npm/">npm</a>
                 </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2018-12-11T14:32:29.000Z">2018-12-11</time>
-                        <a href="/2018/12/11/hexo-post/" class="has-link-black-ter is-size-6">Hexo : 명령어와 옵션들</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/Hexo/">Hexo</a> / <a class="has-link-grey -link" href="/categories/Hexo/Doc/">Doc</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2018-12-11T10:09:31.000Z">2018-12-11</time>
-                        <a href="/2018/12/11/nodejs-npm-command_not_found/" class="has-link-black-ter is-size-6">npm global 패키지 명령어를 찾을 수 없을 때</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a> / <a class="has-link-grey -link" href="/categories/nodejs/npm/">npm</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
-                
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2018-12-10T16:22:14.000Z">2018-12-11</time>
-                        <a href="/2018/12/11/hexo-start/" class="has-link-black-ter is-size-6">Hexo, 그 첫번째 포스트: 설치</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/Hexo/">Hexo</a> / <a class="has-link-grey -link" href="/categories/Hexo/Doc/">Doc</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+            </div>
         </div>
+        
+        <h3 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                npm global 패키지 명령어를 찾을 수 없을 때
+            
+        </h3>
+				
+        <div class="content">
+            <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><p>종종 node설치가 잘못되면 -g 옵션으로 설치한 패키지를 실행할 수 없는 상황이 발생한다.</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ http-server</span><br><span class="line"><span class="hljs-built_in">command</span> not found: http-server</span><br></pre></td></tr></table></figure>
+<p>매우 난감한 상황. 이 글은 이 문제를 해결한 과정을 기록삼아 남긴것으로 Mac OS 환경에서 수행했지만 다른환경에서도 적절히 적용이 가능 할 것이다.<br><a id="more"></a></p>
+<h3 id="해결과정"><a href="#해결과정" class="headerlink" title="해결과정"></a>해결과정</h3><p>global 패키지의 설치 위치가 <code>PATH</code> 환경변수에 설정되어 있지 않을 때 발생한다. 따라서 제일 먼저 확인 해야할 사항은 global 패키지가 설치되는 위치이다.</p>
+<p>아래 명령어를 실행하면 그 경로를 알 수 있다.<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm get prefix</span><br><span class="line">&gt;&gt; &lt;path&gt;</span><br></pre></td></tr></table></figure></p>
+<p>혹은 아무 global 패키지를 하나 설치해보면 나타나는 메시지로 확인해보는 방법도있다.<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g gulp-cli</span><br><span class="line">&gt;&gt; &lt;path&gt;/bin/gulp -&gt; &lt;path&gt;/lib/node_modules/gulp-cli/bin/gulp.js</span><br><span class="line">&gt;&gt; gulp-cli@2.0.1</span><br><span class="line">&gt;&gt; added 236 packages from 148 contributors <span class="hljs-keyword">in</span> 5.109s</span><br></pre></td></tr></table></figure></p>
+<p><code>&lt;path&gt;/bin</code> 디렉토리에 <code>&lt;path&gt;/lib/node_modules/gulp-cli/bin/gulp.js</code>라는 파일을 가리키는 <code>gulp</code> 라는 심볼릭링크를 만든다는 뜻이므로 <code>&lt;path&gt;/bin</code> 이 환경변수 <code>PATH</code>에 없으면 당연히 명령어를 찾을 수 없다.</p>
+<p><code>&lt;path&gt;</code>를 알아냈으면 환경변수 <code>PATH</code> 와 비교해볼 차례. 아래 명령어로 확인해보자.</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ env <span class="hljs-variable">$PATH</span></span><br><span class="line">&gt;&gt; &lt;pathlist&gt;</span><br></pre></td></tr></table></figure>
+<p>아마 <code>&lt;path&gt;/bin</code> 경로가 <code>&lt;pathlist&gt;</code>에 포함되어있지 않을텐데 혹시나 포함되어있다면 조금 복잡해지므로 이 글에선 다루지 않겠다. 아무튼 이 상황에서 취할 수 있는 방법은 아래 두가지가 있다.</p>
+<ol>
+<li>환경변수 <code>PATH</code>에 <code>&lt;path&gt;/bin</code>를 추가하는 방법</li>
+<li><code>&lt;path&gt;</code>를 <code>&lt;pathlist&gt;</code>중의 한 경로에서 <code>bin</code>을 뺀 것으로 설정하는 방법</li>
+</ol>
+<p>첫번째 방법은 인터넷 검색으로 알아보시고.. 두번째 방법은 아래 명령어로 사용 할 수 있다.</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="hljs-built_in">set</span> prefix &lt;new_path&gt;</span><br></pre></td></tr></table></figure>
+<p> 명령어를 사용하기 전에 <code>&lt;path&gt;</code> 디렉토리로 이동한 뒤  <strong>다른 실행파일도 있을 수 있으므로 폴더를 그냥 지우지말고</strong>  <code>bin</code>, <code>lib</code> 폴더를 확인한뒤 npm 패키지와 관련된 파일은 모두 삭제해버리자.</p>
+<p>이제 global 패키지를 설치해서 잘되는지 확인만 해보면된다.<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g http-server</span><br><span class="line">$ http-server</span><br><span class="line"></span><br><span class="line">&gt;&gt; Starting up http-server, serving ./public</span><br><span class="line">&gt;&gt; Available on:</span><br><span class="line">&gt;&gt;   http://127.0.0.1:8080</span><br><span class="line">&gt;&gt;   http://10.67.17.224:8080</span><br><span class="line">&gt;&gt;   http://169.254.158.210:8080</span><br><span class="line">&gt;&gt;   http://192.168.2.1:8080</span><br><span class="line">&gt;&gt; Hit CTRL-C to stop the server</span><br></pre></td></tr></table></figure></p>
+<p>와우 잘되요~</p>
+
+        </div> 
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/nodejs/">nodejs</a>, <a class="has-link-grey -link" href="/tags/npm/">npm</a>, <a class="has-link-grey -link" href="/tags/trouble-shooting/">trouble shooting</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
     </div>
 </div>
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/12/11/hexo-post/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Hexo : 명령어와 옵션들</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/11/hexo-start/">
+                <span class="level-item">Hexo, 그 첫번째 포스트: 설치</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">댓글</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://shovel93.github.io/2018/12/11/nodejs-npm-command_not_found/';
+        this.page.identifier = '2018/12/11/nodejs-npm-command_not_found/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'shovel93' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 
 </div>
                 
@@ -774,7 +793,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="SHOVEL93" height="28">
+                    <img src="/images/logo.png" alt="npm global 패키지 명령어를 찾을 수 없을 때" height="28">
                 
                 </a>
                 <p class="is-size-7">
