@@ -2,21 +2,23 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>태그: trouble shooting - SHOVEL93</title>
+<title>우분투 패키지매니저로 nodejs 설치하기 - SHOVEL93</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="언젠가 이 삽질이 멈출때까지...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SHOVEL93">
-<meta property="og:url" content="http://shovel93.github.io/tags/trouble-shooting/index.html">
+    <meta name="description" content="리눅스 OS를 설치하면 기본적으로 nodejs가 설치되어 있는 경우가 많지만, nodejs 특성상 최신버전의 LTS를 설치하는게 좋다. nodejs 페이지에는 tar 아카이브 파일을 받을 수 잇는 링크를 제공하는데, 압축을 풀고 파일을 옮기고 prefix 확인해보는 몇가지 절차가 좀 필요하므로.. 패키지 매니저를 사용하는 방법을 알아보자.">
+<meta name="keywords" content="nodejs,memo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="우분투 패키지매니저로 nodejs 설치하기">
+<meta property="og:url" content="http://shovel93.github.io/2018/12/22/nodejs-install-on-ubuntu/index.html">
 <meta property="og:site_name" content="SHOVEL93">
-<meta property="og:description" content="언젠가 이 삽질이 멈출때까지...">
+<meta property="og:description" content="리눅스 OS를 설치하면 기본적으로 nodejs가 설치되어 있는 경우가 많지만, nodejs 특성상 최신버전의 LTS를 설치하는게 좋다. nodejs 페이지에는 tar 아카이브 파일을 받을 수 잇는 링크를 제공하는데, 압축을 풀고 파일을 옮기고 prefix 확인해보는 몇가지 절차가 좀 필요하므로.. 패키지 매니저를 사용하는 방법을 알아보자.">
 <meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2018-12-22T13:59:19.475Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SHOVEL93">
-<meta name="twitter:description" content="언젠가 이 삽질이 멈출때까지...">
+<meta name="twitter:title" content="우분투 패키지매니저로 nodejs 설치하기">
+<meta name="twitter:description" content="리눅스 OS를 설치하면 기본적으로 nodejs가 설치되어 있는 경우가 많지만, nodejs 특성상 최신버전의 LTS를 설치하는게 좋다. nodejs 페이지에는 tar 아카이브 파일을 받을 수 잇는 링크를 제공하는데, 압축을 풀고 파일을 옮기고 prefix 확인해보는 몇가지 절차가 좀 필요하므로.. 패키지 매니저를 사용하는 방법을 알아보자.">
 
 
 
@@ -83,7 +85,7 @@
 			<h1 class="navbar-item navbar-logo">
 	            <a href="/">
 	            
-	                <img src="/images/logo.png" alt="SHOVEL93" height="28" width="95">
+	                <img src="/images/logo.png" alt="우분투 패키지매니저로 nodejs 설치하기" height="28" width="95">
 	            
 	            </a>
 			</h1>
@@ -125,26 +127,15 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">태그</a></li>
-            <li class="is-active"><a href="#" aria-current="page">trouble shooting</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-11T10:09:31.000Z">2018-12-11</time>
+                <time class="level-item has-text-grey" datetime="2018-12-22T13:24:24.000Z">2018-12-22</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/nodejs/npm/">npm</a>
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/nodejs/memo/">memo</a>
                 </div>
                 
                 
@@ -153,33 +144,76 @@
         
         <h3 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/12/11/nodejs-npm-command_not_found/">npm global 패키지 명령어를 찾을 수 없을 때</a>
+                우분투 패키지매니저로 nodejs 설치하기
             
         </h3>
 				
         <div class="content">
-            <h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><p>종종 node설치가 잘못되면 -g 옵션으로 설치한 패키지를 실행할 수 없는 상황이 발생한다.</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ http-server</span><br><span class="line"><span class="hljs-built_in">command</span> not found: http-server</span><br></pre></td></tr></table></figure>
-<p>매우 난감한 상황. 이 글은 이 문제를 해결한 과정을 기록삼아 남긴것으로 Mac OS 환경에서 수행했지만 다른환경에서도 적절히 적용이 가능 할 것이다.<br></p>
+            <p>리눅스 OS를 설치하면 기본적으로 nodejs가 설치되어 있는 경우가 많지만, nodejs 특성상 최신버전의 LTS를 설치하는게 좋다. nodejs 페이지에는 tar 아카이브 파일을 받을 수 잇는 링크를 제공하는데, 압축을 풀고 파일을 옮기고 prefix 확인해보는 몇가지 절차가 좀 필요하므로.. 패키지 매니저를 사용하는 방법을 알아보자.</p>
+<a id="more"></a>
+<blockquote>
+<p>이 포스트 내용은 nodejs Readme.md 중 Debian and Ubuntu based distributions 섹션의 Installation 부분 내용을 토대로 재가공한것입니다. <a href="https://github.com/nodesource/distributions/blob/master/README.md" target="_blank" rel="noopener">원문보기</a></p>
+</blockquote>
+<h4 id="1-node-ppa-추가하기"><a href="#1-node-ppa-추가하기" class="headerlink" title="1. node ppa 추가하기"></a>1. node ppa 추가하기</h4><p>아래 명령어를 터미널에서 실행하면 nodejs ppa를 추가하는 쉘 스크립트를 받아서 실행한다. 쉘 스크립트 도중에 <code>apt-get update</code>도 수행하므로 작업이 끝나면 설치 명령어만 실행하면 된다.<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://deb.nodesource.com/setup_10.x</span><br><span class="line">$ sudo sh setup_10.x</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-nodejs-설치하기"><a href="#2-nodejs-설치하기" class="headerlink" title="2. nodejs 설치하기"></a>2. nodejs 설치하기</h4><p>이제 nodejs를 설치할 수 있다. nodejs와 개발에 필요한 도구들을 설치하자.<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install -y nodejs</span><br><span class="line">$ sudo apt-get install gcc g++ make</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-version-확인"><a href="#3-version-확인" class="headerlink" title="3. version 확인"></a>3. version 확인</h4><p>간단한 버전확인 명령어로 제대로 설치되었는지 확인할 수 있다.<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">&gt;&gt; v10.14.2</span><br><span class="line"></span><br><span class="line">$ npm -v</span><br><span class="line">&gt;&gt; 6.4.1</span><br><span class="line"></span><br><span class="line">$ npx -v</span><br><span class="line">&gt;&gt; 6.4.1</span><br></pre></td></tr></table></figure></p>
+
         </div> 
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/11/nodejs-npm-command_not_found/#more">더보기</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/memo/">memo</a>, <a class="has-link-grey -link" href="/tags/nodejs/">nodejs</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
 </div>
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/15/hexo-config/">
+                <span class="level-item">hexo 설정 파일</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">댓글</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://shovel93.github.io/2018/12/22/nodejs-install-on-ubuntu/';
+        this.page.identifier = '2018/12/22/nodejs-install-on-ubuntu/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'shovel93' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 
 </div>
                 
@@ -809,7 +843,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="SHOVEL93" height="28">
+                    <img src="/images/logo.png" alt="우분투 패키지매니저로 nodejs 설치하기" height="28">
                 
                 </a>
                 <p class="is-size-7">
